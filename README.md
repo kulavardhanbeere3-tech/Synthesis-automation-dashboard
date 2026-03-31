@@ -304,4 +304,10 @@ This project is a dashboard for monitoring and automation.
 
 ## 👨‍💻 Author
 Kulavardhan Beere
->>>>>>> e56a81b09a84994eda582711be853ace9cefef29
+![Output](output.png)
+>>>>>>> screenshots/
+>>>>>>> <img width="1860" height="979" alt="Screenshot 2025-09-10 124503" src="https://github.com/user-attachments/assets/b3dc3fa1-71a1-4256-a965-7358584ac245" />
+<img width="1890" height="902" alt="Screenshot 2025-09-10 124445" src="https://github.com/user-attachments/assets/2d914fc4-c628-429f-9e23-835854e7371a" />
+<img width="1876" height="926" alt="Screenshot 2025-09-10 124422" src="https://github.com/user-attachments/assets/5758e15d-4b19-46e7-b61d-cfd2b6110093" />
+<img width="1864" height="919" alt="Screenshot 2025-09-10 124351" src="https://github.com/user-attachments/assets/0cb2dcc1-657c-4f99-b014-045096935a5f" />
+<img width="1860" height="979" alt="Screenshot 2025-09-10 124503" src="https://github.com/user-attachments/assets/14896530-3f6f-401c-96cf-ae9b2cd02ff1" />
