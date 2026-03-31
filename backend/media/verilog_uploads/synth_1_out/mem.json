@@ -1,0 +1,578 @@
+{
+  "creator": "Yosys 0.36+42 (git sha1 70d35314d, clang 11.0.1-2 -fPIC -Os)",
+  "modules": {
+    "fulladder": {
+      "attributes": {
+        "src": "/data/fulladder.v:1.1-58.10",
+        "top": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "Sum": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "Carry": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "Clock": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "Scan_clk": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "Scan_en": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "cg_en": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "gen_clk_mux": {
+          "direction": "input",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+        "B1": {
+          "hide_name": 0,
+          "type": "BUF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:55.8-55.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "Z": [ 6 ]
+          }
+        },
+        "B2": {
+          "hide_name": 0,
+          "type": "BUF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:56.8-56.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Z": [ 5 ]
+          }
+        },
+        "CLK_B1": {
+          "hide_name": 0,
+          "type": "BUF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:20.8-20.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "Z": [ 15 ]
+          }
+        },
+        "G1": {
+          "hide_name": 0,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:32.9-32.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 17 ],
+            "Z": [ 18 ]
+          }
+        },
+        "G2": {
+          "hide_name": 0,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:33.9-33.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 19 ],
+            "Z": [ 20 ]
+          }
+        },
+        "G3": {
+          "hide_name": 0,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:39.9-39.38"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 17 ],
+            "A2": [ 19 ],
+            "ZN": [ 21 ]
+          }
+        },
+        "G4": {
+          "hide_name": 0,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:40.9-40.39"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 16 ],
+            "A2": [ 17 ],
+            "ZN": [ 22 ]
+          }
+        },
+        "G5": {
+          "hide_name": 0,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:41.9-41.39"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 16 ],
+            "A2": [ 19 ],
+            "ZN": [ 23 ]
+          }
+        },
+        "G6": {
+          "hide_name": 0,
+          "type": "OR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:46.8-46.40"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 24 ],
+            "A2": [ 23 ],
+            "ZN": [ 25 ]
+          }
+        },
+        "G7": {
+          "hide_name": 0,
+          "type": "OR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:45.8-45.39"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 21 ],
+            "A2": [ 22 ],
+            "ZN": [ 24 ]
+          }
+        },
+        "gate": {
+          "hide_name": 0,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:17.9-17.59"
+          },
+          "port_directions": {
+            "A1": "input",
+            "A2": "input",
+            "ZN": "output"
+          },
+          "connections": {
+            "A1": [ 26 ],
+            "A2": [ 10 ],
+            "ZN": [ 14 ]
+          }
+        },
+        "mux1": {
+          "hide_name": 0,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:14.9-14.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "S": [ 9 ],
+            "Z": [ 26 ]
+          }
+        },
+        "reg1": {
+          "hide_name": 0,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:25.8-25.45"
+          },
+          "port_directions": {
+            "CK": "input",
+            "D": "input",
+            "Q": "output",
+            "QN": "output"
+          },
+          "connections": {
+            "CK": [ 15 ],
+            "D": [ 2 ],
+            "Q": [ 16 ],
+            "QN": [ ]
+          }
+        },
+        "reg2": {
+          "hide_name": 0,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:26.8-26.45"
+          },
+          "port_directions": {
+            "CK": "input",
+            "D": "input",
+            "Q": "output",
+            "QN": "output"
+          },
+          "connections": {
+            "CK": [ 15 ],
+            "D": [ 3 ],
+            "Q": [ 17 ],
+            "QN": [ ]
+          }
+        },
+        "reg3": {
+          "hide_name": 0,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:27.8-27.45"
+          },
+          "port_directions": {
+            "CK": "input",
+            "D": "input",
+            "Q": "output",
+            "QN": "output"
+          },
+          "connections": {
+            "CK": [ 15 ],
+            "D": [ 4 ],
+            "Q": [ 19 ],
+            "QN": [ ]
+          }
+        },
+        "reg4": {
+          "hide_name": 0,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:50.8-50.48"
+          },
+          "port_directions": {
+            "CK": "input",
+            "D": "input",
+            "Q": "output",
+            "QN": "output"
+          },
+          "connections": {
+            "CK": [ 15 ],
+            "D": [ 25 ],
+            "Q": [ 12 ],
+            "QN": [ ]
+          }
+        },
+        "reg5": {
+          "hide_name": 0,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/data/fulladder.v:51.8-51.48"
+          },
+          "port_directions": {
+            "CK": "input",
+            "D": "input",
+            "Q": "output",
+            "QN": "output"
+          },
+          "connections": {
+            "CK": [ 15 ],
+            "D": [ 20 ],
+            "Q": [ 13 ],
+            "QN": [ ]
+          }
+        }
+      },
+      "netnames": {
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.7-3.8"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.9-3.10"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.11-3.12"
+          }
+        },
+        "CLK": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.61-6.64"
+          }
+        },
+        "Carry": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/data/fulladder.v:4.12-4.17"
+          }
+        },
+        "Clock": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.13-3.18"
+          }
+        },
+        "Scan_clk": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.19-3.27"
+          }
+        },
+        "Scan_en": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.28-3.35"
+          }
+        },
+        "Sum": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/data/fulladder.v:4.8-4.11"
+          }
+        },
+        "cg_en": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.36-3.41"
+          }
+        },
+        "gated_clock": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.76-6.87"
+          }
+        },
+        "gen_clk_mux": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/data/fulladder.v:3.43-3.54"
+          }
+        },
+        "mux_clock": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.66-6.75"
+          }
+        },
+        "n10": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.31-6.34"
+          }
+        },
+        "n11": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.36-6.39"
+          }
+        },
+        "n12": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.41-6.44"
+          }
+        },
+        "n13": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.46-6.49"
+          }
+        },
+        "n14": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.51-6.54"
+          }
+        },
+        "n15": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.56-6.59"
+          }
+        },
+        "n4": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.7-6.9"
+          }
+        },
+        "n5": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.11-6.13"
+          }
+        },
+        "n6": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.15-6.17"
+          }
+        },
+        "n7": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.19-6.21"
+          }
+        },
+        "n8": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.23-6.25"
+          }
+        },
+        "n9": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/data/fulladder.v:6.27-6.29"
+          }
+        }
+      }
+    }
+  }
+}

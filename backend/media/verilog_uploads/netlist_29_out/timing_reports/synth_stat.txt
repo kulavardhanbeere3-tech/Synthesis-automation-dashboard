@@ -1,0 +1,17 @@
+
+26. Printing statistics.
+
+=== full_adder_simple ===
+
+   Number of wires:                 10
+   Number of wire bits:             10
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $_AND_                          3
+     $_OR_                           2
+     $_XOR_                          2
+

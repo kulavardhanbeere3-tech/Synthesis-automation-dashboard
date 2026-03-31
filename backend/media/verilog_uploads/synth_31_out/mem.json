@@ -1,0 +1,141 @@
+{
+  "creator": "Yosys 0.36+42 (git sha1 70d35314d, clang 11.0.1-2 -fPIC -Os)",
+  "modules": {
+    "counter_4bit": {
+      "attributes": {
+        "src": "/data/counter_4bit.v:1.1-17.10",
+        "top": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "cnt": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$auto$alumacc.cc:485:replace_alu$9": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/data/counter_4bit.v:13.16-13.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 5, 6, 7, 8 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 9, 10, 11, 12 ],
+            "X": [ 13, 14, 15, 16 ],
+            "Y": [ 17, 18, 19, 20 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$6": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000001",
+            "ARST_VALUE": "0000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/data/counter_4bit.v:9.1-15.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 17, 18, 19, 20 ],
+            "EN": [ 4 ],
+            "Q": [ 5, 6, 7, 8 ]
+          }
+        }
+      },
+      "netnames": {
+        "$add$/data/counter_4bit.v:13$2_Y": {
+          "hide_name": 1,
+          "bits": [ 17, 18, 19, 20 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:501:replace_alu$10": {
+          "hide_name": 1,
+          "bits": [ 13, 14, 15, 16 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:502:replace_alu$11": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/data/counter_4bit.v:2.16-2.19"
+          }
+        },
+        "cnt": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "/data/counter_4bit.v:5.22-5.25"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/data/counter_4bit.v:4.16-4.18"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/data/counter_4bit.v:3.16-3.19"
+          }
+        }
+      }
+    }
+  }
+}

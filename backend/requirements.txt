@@ -1,0 +1,8 @@
+Django>=4.2
+djangorestframework>=3.14
+Pillow>=9.0.0
+psycopg2-binary>=2.9  # Only if using PostgreSQL
+python-dotenv>=1.0
+# For file uploads and media
+# For running subprocesses (standard library)
+# Docker is called via subprocess, not as a Python package 
