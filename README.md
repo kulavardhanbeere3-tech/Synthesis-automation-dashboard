@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Verilog Synthesis and Netlist Generation Platform
 
 ## 1. Project Overview
@@ -282,3 +283,25 @@ When asked about this project in an interview, you can use the following structu
 > "This project demonstrates my ability to build full-stack engineering tools that combine digital design, automation, and user experience. I can discuss both the hardware synthesis flow and the software architecture, and I’m comfortable working across the stack to deliver robust, user-friendly solutions."
 
 --- 
+=======
+# Synthesis Automation Dashboard
+
+## 📌 Project Description
+This project is a dashboard for monitoring and automation.
+
+## ⚙️ Features
+- Data visualization
+- Automation controls
+- User-friendly interface
+
+## 🛠️ Technologies Used
+- (Add your tech: Python / Java / HTML / etc.)
+
+## 🚀 How to Run
+1. Clone the repository
+2. Open project folder
+3. Run the main file
+
+## 👨‍💻 Author
+Kulavardhan Beere
+>>>>>>> e56a81b09a84994eda582711be853ace9cefef29
